@@ -12,5 +12,10 @@ const Umut = {
     kayıtsız: "kayıtsız rol id",
   },
 };
+const zwetra = {
+  iltifat: {
+    id: "Kişi id",
+  },
+};
 //Client ID required
-module.exports = { global, handler,Umut };
+module.exports = { global, handler, Umut ,zwetra};
