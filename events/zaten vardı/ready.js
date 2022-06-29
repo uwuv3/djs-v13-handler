@@ -1,5 +1,5 @@
-const client = require("../index");
-const { global } = require("../config");
+const client = require("../../index");
+const { global } = require("../../config");
 const chalk = require("chalk");
 client.on("ready", async () => {
   client.user.setActivity("Made by uwuv3");

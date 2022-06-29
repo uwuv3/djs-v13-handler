@@ -33,8 +33,8 @@ module.exports = async client => {
 
     //slash cmd
     const { REST } = require("@discordjs/rest");
-    const { Routes } = require("discord-api-types/v9");
-    const rest = new REST({ version: "9" }).setToken(process.env.token);
+    const { Routes } = require("discord-api-types/v10");
+    const rest = new REST({ version: "10" }).setToken(process.env.token);
 
     const commands = [];
     let cmdnum = 0;
@@ -91,13 +91,13 @@ module.exports = async client => {
     console.error(error.message);
   }
   //events
-  readdirSync("./events/").forEach(file => {
-    const events = readdirSync("./events/").filter(file =>
+  readdirSync("./events/").forEach(dir => {
+    const events = readdirSync(`./events/${dir}`).filter(file =>
       file.endsWith(".js")
     );
 
     for (let file of events) {
-      let pull = require(`../events/${file}`);
+      let pull = require(`../events/${dir}/${file}`);
 
       if (pull.name) {
         client.events.set(pull.name, pull);

@@ -2,8 +2,15 @@ const global = {
   prefix: "!",
 };
 const handler = {
-  ServerID: "Server ID",
-  ClientID: "Client ID",
+  ServerID: "984774892132122634",
+  ClientID: "985195644253769778",
+};
+const Umut = {
+  yasaklıtag: {
+    tag: "yasaklı tag",
+    ceza: "cezalı rol id",
+    kayıtsız: "kayıtsız rol id",
+  },
 };
 //Client ID required
-module.exports = { global, handler };
+module.exports = { global, handler,Umut };

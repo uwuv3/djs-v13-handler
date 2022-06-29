@@ -1,0 +1,1 @@
+//https://discordturkiye.com/konular/botu-sesli-kanalda-tutma-kodu.115/

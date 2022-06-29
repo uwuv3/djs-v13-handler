@@ -1,4 +1,4 @@
-const client = require("../index");
+const client = require("../../index");
 client.on("interactionCreate", async interaction => {
   if (!interaction.isCommand()) return;
   if (!interaction.client.slashCommands.has(interaction.commandName)) return;
