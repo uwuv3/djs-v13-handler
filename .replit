@@ -1,5 +1,7 @@
 entrypoint = "index.js"
 
+hidden = [".config"]
+
 [interpreter]
 command = [
     "prybar-nodejs",
@@ -9,26 +11,40 @@ command = [
     "-i"
 ]
 
+[[hints]]
+regex = "Error \\[ERR_REQUIRE_ESM\\]"
+message = "We see that you are using require(...) inside your code. We currently do not support this syntax. Please use 'import' instead when using external modules. (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)"
+
+[nix]
+channel = "stable-21_11"
+
+[env]
+XDG_CONFIG_HOME = "/home/runner/.config"
+PATH = "/home/runner/$REPL_SLUG/.config/npm/node_global/bin:/home/runner/$REPL_SLUG/node_modules/.bin"
+npm_config_prefix = "/home/runner/$REPL_SLUG/.config/npm/node_global"
+
 [packager]
 language = "nodejs"
 
-[packager.features]
-packageSearch = true
-guessImports = true
+  [packager.features]
+  packageSearch = true
+  guessImports = true
+  enabledForHosting = false
+
+[unitTest]
+language = "nodejs"
 
 [languages.javascript]
-pattern = "**/*.js"
-staynx = "javascript"
+pattern = "**/{*.js,*.jsx,*.ts,*.tsx}"
 
 [languages.javascript.languageServer]
 start = [ "typescript-language-server", "--stdio" ]
-
 
 [debugger]
 support = true
 
   [debugger.interactive]
-  transport = "localhost:8080"
+  transport = "localhost:0"
   startCommand = [ "dap-node" ]
 
     [debugger.interactive.initializeMessage]
