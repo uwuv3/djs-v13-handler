@@ -7,6 +7,7 @@ const handler = {
 };
 const Umut = {
   yasaklıtag: {
+    aktif: false,
     tag: "yasaklı tag",
     ceza: "cezalı rol id",
     kayıtsız: "kayıtsız rol id",
@@ -14,8 +15,9 @@ const Umut = {
 };
 const zwetra = {
   iltifat: {
+    aktif: false,
     id: "Kişi id",
   },
 };
 //Client ID required
-module.exports = { global, handler, Umut ,zwetra};
+module.exports = { global, handler, Umut, zwetra };

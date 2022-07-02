@@ -2,7 +2,7 @@
 //hata : embed field value
 const Discord = require("discord.js");
 module.exports = {
-  name: "serverinfo",
+ // name: "serverinfo",
   run: async (client, message, args) => {
     const guild = message.guild;
     const channelCache = guild.channels.cache;

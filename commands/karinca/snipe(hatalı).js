@@ -2,7 +2,7 @@
 //Hatalı
 const discord = require("discord.js");
 module.exports = {
-  name: "snipe",
+  //name: "snipe",
   aliases: ["sonmesaj"],
   run: async (client, message, args) => {
     const snipeembed = new discord.MessageEmbed()

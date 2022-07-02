@@ -5,7 +5,7 @@ const Discord = require("discord.js");
 const { stripIndents } = require("common-tags");
 
 module.exports = {
-  name: "sayı-tahmin",
+  //name: "sayı-tahmin",
   run: async (client, message, args) => {
     this.games = new Set();
     if (this.games.has(message.channel.id))

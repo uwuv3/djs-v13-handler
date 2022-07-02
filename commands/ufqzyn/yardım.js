@@ -18,38 +18,143 @@ module.exports = {
               name: `BOTADI - Yardım`,
               iconURL: client.user.avatarURL(),
             })
-            .setDescription(
-              `Bize Birşey Bildirmek İsterseniz: \`${prefix}komutadı\`
-Yardım Almak İsterseniz: \`${prefix}komutadı\`
-Linkler: [Ekle](https://discord.com/oauth2/authorize?client_id=BOTID&scope=bot&permissions=8589934591) - [Destek](https://discord.gg/invite-code) - [Oyver](https://top.gg/bot/BOTID/vote)`
-            )
-            .addField("[1]KOMUTADI", `\`${prefix}yardım komutadı\``, true)
+            .addField("[1]Çağatay", `\`${prefix}yardım çağatay\``, true)
+            .addField("[2]Edip", `\`${prefix}yardım edip\``, true)
+            .addField("[3]Eneskurt", `\`${prefix}yardım eneskurt\``, true)
+            .addField("[4]Eyuq", `\`${prefix}yardım eyuq\``, true)
+            .addField("[5]Inflames", `\`${prefix}yardım inflames\``, true)
+            .addField("[6]Şaherman", `\`${prefix}yardım saherman\``, true)
+            .addField("[7]Shayla", `\`${prefix}yardım shayla\``, true)
+            .addField("[8]Ufqzyn", `\`${prefix}yardım ufqzyn\``, true)
             .setImage(``)
             .setTimestamp(),
         ],
       });
     // KOMUTADI
-    if (args[0] === "komutadı") {
-      return message.channel.send(
-        new Discord.MessageEmbed()
-          .setColor(`RANDOM`)
-          .setThumbnail(
-            `https://cdn.discordapp.com/avatars/${client.user.id}/${client.user.avatar}.png?size=2048`
-          )
-          .setAuthor({
-            name: `BOTADI - YETKİLİ`,
-            iconURL: client.user.avatarURL(),
-          })
-          .setDescription(
-            `**${prefix}komutadı** = Komut Açıklaması.
-**${prefix}komutadı** = Komut Açıklaması.
-**${prefix}komutadı** = Komut Açıklaması.
-**${prefix}komutadı** = Komut Açıklaması.
-**${prefix}komutadı** = Komut Açıklaması.`
-          )
-          .setImage(``)
-          .setTimestamp()
-      );
+    if (args[0] === "ufqzyn") {
+      return message.channel.send({
+        embeds: [
+          new Discord.MessageEmbed()
+            .setColor(`RANDOM`)
+            .setThumbnail(
+              `https://cdn.discordapp.com/avatars/${client.user.id}/${client.user.avatar}.png?size=2048`
+            )
+            .setDescription(
+              `**${prefix}avatar2** = User avatar
+              **${prefix}yardım** = Yardım komudu`
+            )
+            .setImage(``)
+            .setTimestamp(),
+        ],
+      });
+    }
+    if (args[0] === "shayla") {
+      return message.channel.send({
+        embeds: [
+          new Discord.MessageEmbed()
+            .setColor(`RANDOM`)
+            .setThumbnail(
+              `https://cdn.discordapp.com/avatars/${client.user.id}/${client.user.avatar}.png?size=2048`
+            )
+            .setDescription(
+              `**${prefix}istatistik** = Bot istatistik`
+            )
+            .setImage(``)
+            .setTimestamp(),
+        ],
+      });
+    }
+    if (args[0] === "saherman") {
+      return message.channel.send({
+        embeds: [
+          new Discord.MessageEmbed()
+            .setColor(`RANDOM`)
+            .setThumbnail(
+              `https://cdn.discordapp.com/avatars/${client.user.id}/${client.user.avatar}.png?size=2048`
+            )
+            .setDescription(
+              `**${prefix}avatar** = Dyno avatar`
+            )
+            .setImage(``)
+            .setTimestamp(),
+        ],
+      });
+    }
+    if (args[0] === "inflames") {
+      return message.channel.send({
+        embeds: [
+          new Discord.MessageEmbed()
+            .setColor(`RANDOM`)
+            .setThumbnail(
+              `https://cdn.discordapp.com/avatars/${client.user.id}/${client.user.avatar}.png?size=2048`
+            )
+            .setDescription(
+              `**${prefix}tac-kimde** = Taç kimde
+              **${prefix}herkeserolver** = Herkeze rol verir`
+            )
+            .setImage(``)
+            .setTimestamp(),
+        ],
+      });
+    }
+    if (args[0] === "eyuq") {
+      return message.channel.send({
+        embeds: [
+          new Discord.MessageEmbed()
+            .setColor(`RANDOM`)
+            .setThumbnail(
+              `https://cdn.discordapp.com/avatars/${client.user.id}/${client.user.avatar}.png?size=2048`
+            )
+            .setDescription(`**${prefix}afk** = Afk olursun`)
+            .setImage(``)
+            .setTimestamp(),
+        ],
+      });
+    }
+    if (args[0] === "eneskurt") {
+      return message.channel.send({
+        embeds: [
+          new Discord.MessageEmbed()
+            .setColor(`RANDOM`)
+            .setThumbnail(
+              `https://cdn.discordapp.com/avatars/${client.user.id}/${client.user.avatar}.png?size=2048`
+            )
+            .setDescription(
+              `**${prefix}balıktut** = Balık tutarsın
+              **${prefix}hesapla** = Matematik`
+            )
+            .setImage(``)
+            .setTimestamp(),
+        ],
+      });
+    }
+    if (args[0] === "edip") {
+      return message.channel.send({
+        embeds: [
+          new Discord.MessageEmbed()
+            .setColor(`RANDOM`)
+            .setThumbnail(
+              `https://cdn.discordapp.com/avatars/${client.user.id}/${client.user.avatar}.png?size=2048`
+            )
+            .setDescription(`**${prefix}uptime** = Botun uptimesini söyler.`)
+            .setImage(``)
+            .setTimestamp(),
+        ],
+      });
+    }
+    if (args[0] === "çağatay") {
+      return message.channel.send({
+        embeds: [
+          new Discord.MessageEmbed()
+            .setColor(`RANDOM`)
+            .setThumbnail(
+              `https://cdn.discordapp.com/avatars/${client.user.id}/${client.user.avatar}.png?size=2048`
+            )
+            .setDescription(`**${prefix}nsfw** = ANİME NSFW.`)
+            .setImage(``)
+            .setTimestamp(),
+        ],
+      });
     }
   },
 };

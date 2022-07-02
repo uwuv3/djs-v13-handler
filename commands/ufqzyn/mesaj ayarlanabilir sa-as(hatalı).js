@@ -5,7 +5,7 @@ const Discord = require("discord.js");
 const { bot } = require("../../config");
 const config = bot;
 module.exports = {
-  name: "qwertyuıopğüasdfghjklşizxcvbnmöç",
+ // name: "qwertyuıopğüasdfghjklşizxcvbnmöç",
   aliases: [],
   run: async (client, message, args) => {},
 };

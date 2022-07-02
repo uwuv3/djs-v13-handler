@@ -7,18 +7,18 @@ let sözler = [
   "örnek mesaj 2",
   // Böyle böyle çoğaltabilirsiniz
 ];
-//HAta yapmaması için kaptıyorum...
-/*
+
 client.on("messageCreate", async (message) => {
-  if (!message.guild) return;
-  let iltifat = sözler[Math.floor(Math.random() * sözler.length)];
-  //Hata 1: message.member.id olmaz
-  if (message.author.id === zwetra.iltifat.id)
-    //kişi id
-    sözSayı++;
-  if (sözSayı >= 50) {
-    sözSayı = 0;
-    message.reply(iltifat);
+  if (zwetra.iltifat.aktif) {
+    if (!message.guild) return;
+    let iltifat = sözler[Math.floor(Math.random() * sözler.length)];
+    //Hata 1: message.member.id olmaz
+    if (message.author.id === zwetra.iltifat.id)
+      //kişi id
+      sözSayı++;
+    if (sözSayı >= 50) {
+      sözSayı = 0;
+      message.reply(iltifat);
+    }
   }
 });
-*/

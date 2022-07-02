@@ -7,12 +7,12 @@ const { global, handler } = require("../config");
 let table = new ascii("SlashCmd and Cmd");
 table.setHeading("File", "Location", "Status");
 
-module.exports = async client => {
+module.exports = async (client) => {
   try {
     //Command
     let cmddnum = 0;
-    readdirSync("./commands/").forEach(dir => {
-      const commands = readdirSync(`./commands/${dir}/`).filter(file =>
+    readdirSync("./commands/").forEach((dir) => {
+      const commands = readdirSync(`./commands/${dir}/`).filter((file) =>
         file.endsWith(".js")
       );
 
@@ -23,11 +23,12 @@ module.exports = async client => {
           client.commands.set(pull.name, pull);
           table.addRow(file, "Command", "✅");
         } else {
+          --cmddnum;
           table.addRow(file, "Command", "❌");
           continue;
         }
         if (pull.aliases && Array.isArray(pull.aliases))
-          pull.aliases.forEach(alias => client.aliases.set(alias, pull.name));
+          pull.aliases.forEach((alias) => client.aliases.set(alias, pull.name));
       }
     });
 
@@ -40,10 +41,10 @@ module.exports = async client => {
     let cmdnum = 0;
 
     const commandFiles = readdirSync("./sCommands")
-      .map(folder =>
+      .map((folder) =>
         readdirSync(`./sCommands/${folder}`)
-          .filter(file => file.endsWith(".js"))
-          .map(file => `../sCommands/${folder}/${file}`)
+          .filter((file) => file.endsWith(".js"))
+          .map((file) => `../sCommands/${folder}/${file}`)
       )
       .flat();
 
@@ -91,8 +92,8 @@ module.exports = async client => {
     console.error(error.message);
   }
   //events
-  readdirSync("./events/").forEach(dir => {
-    const events = readdirSync(`./events/${dir}`).filter(file =>
+  readdirSync("./events/").forEach((dir) => {
+    const events = readdirSync(`./events/${dir}`).filter((file) =>
       file.endsWith(".js")
     );
 
