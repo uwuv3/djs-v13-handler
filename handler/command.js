@@ -32,6 +32,7 @@ module.exports = async client => {
     });
 
     //slash cmd
+    
     const { REST } = require("@discordjs/rest");
     const { Routes } = require("discord-api-types/v10");
     const rest = new REST({ version: "10" }).setToken(process.env.token);
@@ -56,13 +57,13 @@ module.exports = async client => {
         client.slashCommands.set(command.data.name, command);
         if (command.global === false) {
           await rest.put(
-            Routes.applicationGuildCommands(handler.ClientID, handler.ServerID),
+            Routes.applicationCommands(handler.ClientID, handler.ServerID),
             {
               body: commands,
             }
           );
         } else {
-          await rest.put(Routes.applicationCommands(handler.ClientID));
+          await rest.put(Routes.applicationCommands(handler.appID));
         }
         if (command.data.name) {
           ++cmdnum;
