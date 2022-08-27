@@ -4,6 +4,7 @@ const global = {
 const handler = {
   ServerID: "Server ID",
   ClientID: "Client ID",
+  appID:"Application ID"
 };
-//Client ID required
+//app ID required
 module.exports = { global, handler };
